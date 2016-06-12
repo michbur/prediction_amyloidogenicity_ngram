@@ -50,7 +50,7 @@ AUC_boxplot <- ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
   my_theme + 
   coord_flip()
 
-cairo_ps("./publication/figures/AUC_boxplot.eps", height = 3.5, width = 6.5)
+cairo_ps("./publication/figures/AUC_boxplot.eps", height = 3, width = 6)
 #png("./pub_figures/AUC_boxplot.png", height = 648, width = 648)
 print(AUC_boxplot)
 dev.off()
@@ -99,14 +99,15 @@ ngram_plot <- ggplot(ngram_freq_plot, aes(x = decoded_name, y = value)) +
   scale_shape_manual("Motif:", breaks = c("Amyloidogenic", "Non-amyloidogenic"), values = c(16, 17, NA)) +
   scale_y_continuous("Frequency") +
   scale_x_discrete("") +
-  coord_flip() +
+  #coord_flip() +
   my_theme +
-  theme(panel.grid.major.y = element_line(color = "lightgrey", size = 0.5)) 
+  theme(panel.grid.major.y = element_line(color = "lightgrey", size = 0.5),
+        axis.text.x = element_text(angle = 90, hjust = 1))
 
 # in case we need to get n-grams in a tabular format
 #writeLines(as.character(ngram_freq_plot[["decoded_name"]]), "n_gramy_Ania.txt")
 
-cairo_ps("./publication/figures/ngrams.eps", height = 8, width = 2.5)
+cairo_ps("./publication/figures/ngrams.eps", height = 2, width = 6)
 print(ngram_plot)
 dev.off()
 

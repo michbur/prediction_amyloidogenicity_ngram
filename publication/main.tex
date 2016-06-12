@@ -29,7 +29,7 @@ Engineering, Faculty of Fundamental Problems of Technology}
 
 \begin{abstract}
 Amyloids are proteins associated with the number of clinical disorders (e.g., Alzheimer's, Creutzfeldt-Jakob's and Huntington's diseases). Despite their diversity, all amyloid proteins can undergo aggregation initiated by 6- to \mbox{15-residue} segments called hot spots. To find the patterns defining the hot-spots, we trained predictors of amyloidogenicity based on random forests using short subsequences (n-grams) extracted from amyloidogenic and non-amyloidogenic peptides collected in the AmyLoad database. Since the amyloidogenicity may not depend on the exact sequence of amino acids but on more general properties of amino acids, we tested 524,284 reduced amino acid alphabets of different lengths (three to six letters) to find an alphabet providing the best performance of the predictor in cross-validation. The predictor based on this alphabet, called AmyloGram, was benchmarked against the most popular tools for the detection of amyloid peptides using an external data set and obtained the highest values of performance measures (AUC: 0.90, MCC: 0.63). Additionally, our results showed that the amyloidogenicity is strongly correlated with hydrophobicity, a tendency to form $\beta$-sheets and rigidity of amino acid residues. After the reduction of amino acids in peptides using the best-performing alphabet, among the most informative n-grams we identified 15 that were already confirmed experimentally. 
-AmyloGram is available as a web-server: \url{www.smorfland.uni.wroc.pl/amylogram/}. The code and results are publicly available at: \url{github.com/michbur/prediction\_amyloidogenicity\_ngram}.
+AmyloGram is available as a web-server: \url{www.smorfland.uni.wroc.pl/amylogram/}. The code and results are publicly available at: \url{github.com/michbur/prediction_amyloidogenicity_ngram}.
 
 \end{abstract}
 
@@ -904,7 +904,7 @@ National Science Center (2015/17/N/NZ2/01845).
 Our software is accessible as the web server under address 
 \url{www.smorfland.uni.wroc.pl/amylogram/}.
 
-The code and results are publicly available at: \url{github.com/michbur/prediction\_amyloidogenicity\_ngram}.
+The code and results are publicly available at: \url{github.com/michbur/prediction_amyloidogenicity_ngram}.
 
 \bibliography{amyloids}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.18)  12 JUN 2016 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.18)  12 JUN 2016 23:46
 entering extended mode
 **main.tex
 (main.tex
@@ -827,7 +827,7 @@ Package epstopdf Info: Source file: <figures/ngram_scheme.eps>
 nverted-to.pdf figures/ngram_scheme.eps>
 (epstopdf)             \includegraphics on input line 290.
 Package epstopdf Info: Output file is already uptodate.
- <figures/ngram_scheme-eps-converted-to.pdf, id=15, 386.44376pt x 811.03pt>
+ <figures/ngram_scheme-eps-converted-to.pdf, id=14, 386.44376pt x 811.03pt>
 File: figures/ngram_scheme-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ngram_scheme-eps-converted-to.pdf>
@@ -902,11 +902,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8873 strings out of 493671
- 129189 string characters out of 3143045
+ 8870 strings out of 493671
+ 129173 string characters out of 3143045
  351678 words of memory out of 3000000
  11812 multiletter control sequences out of 15000+200000
- 55912 words of font info for 231 fonts, out of 3000000 for 9000
+ 55160 words of font info for 228 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,13n,45p,1433b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/miktex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fi
@@ -919,7 +919,7 @@ rw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/miktex/fonts/type1/urw/symbol/us
 yr.pfb><C:/Program Files (x86)/miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Prog
 ram Files (x86)/miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)
 /miktex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 390658 bytes).
+Output written on main.pdf (10 pages, 390116 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

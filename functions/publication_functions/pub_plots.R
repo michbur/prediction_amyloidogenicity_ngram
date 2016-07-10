@@ -11,7 +11,14 @@ amyloids_plot <- select(amyloids, AUC_mean, MCC_mean, Sens_mean, Spec_mean, pos,
          et = factor(et, labels = c("Encoding", "Best-performing encoding",
                                     "Standard encoding", "Full alphabet"))) %>%
   mutate(len_range = factor(len_range, 
-                            labels = paste0("Test peptide length: ", c("6 ", "7-10", "11-15", "16-25"))))
+                            labels = paste0("Test peptide length: ", c("6 ", "7-10", "11-15", "16-25"))),
+         et2 = ifelse(enc_adj == 1L, "Standard encoding (Kosiol et al., 2004)", as.character(et)),
+         et2 = ifelse(enc_adj == 2L, "Standard encoding (Melo and Marti-Renom, 2006)", as.character(et2)),
+         et2 = factor(et2, levels = c("Encoding", 
+                                      "Best-performing encoding", 
+                                      "Full alphabet", 
+                                      "Standard encoding (Kosiol et al., 2004)", 
+                                      "Standard encoding (Melo and Marti-Renom, 2006)")))
 
 # Fig 1 all encodings sens/spec  ----------------------------------------
 
@@ -40,19 +47,22 @@ dev.off()
 
 AUC_boxplot <- ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
   geom_boxplot(outlier.color = "grey", outlier.shape = 1) +
-  geom_point(data = filter(amyloids_plot, et != "Encoding"), 
-             aes(x = len_range, y = AUC_mean, color = et, shape = et)) +
+  geom_point(data = filter(amyloids_plot, et2 != "Encoding"), 
+             aes(x = len_range, y = AUC_mean, color = et2, shape = et2)) +
   scale_x_discrete("") +
   scale_y_continuous("Mean AUC") +
-  scale_shape_manual("", values = c(1, 16, 15, 15), drop = FALSE) +
-  scale_color_manual("", values = c("grey", "red", "blue", "green"), drop = FALSE) +
+  guides(color = guide_legend(nrow = 2), shape = guide_legend(nrow = 2)) +
+  scale_shape_manual("", values = c(1, 16, 16, 16, 15), drop = FALSE) +
+  scale_color_manual("", values = c("grey", "red", "green", "blue", "blue"), drop = FALSE) +
   facet_wrap(~ pos, nrow = 3) +
   my_theme + 
-  coord_flip()
+  coord_flip() 
+print(AUC_boxplot)
+
 
 cairo_ps("./publication/figures/AUC_boxplot.eps", height = 3, width = 6)
 #png("./pub_figures/AUC_boxplot.png", height = 648, width = 648)
-print(AUC_boxplot)
+
 dev.off()
 
 # Fig 3 MCC boxplot  ----------------------------------------

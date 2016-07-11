@@ -52,17 +52,15 @@ AUC_boxplot <- ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
   scale_x_discrete("") +
   scale_y_continuous("Mean AUC") +
   guides(color = guide_legend(nrow = 2), shape = guide_legend(nrow = 2)) +
-  scale_shape_manual("", values = c(1, 16, 16, 16, 15), drop = FALSE) +
+  scale_shape_manual("", values = c(1, 16, 16, 17, 15), drop = FALSE) +
   scale_color_manual("", values = c("grey", "red", "green", "blue", "blue"), drop = FALSE) +
   facet_wrap(~ pos, nrow = 3) +
   my_theme + 
   coord_flip() 
-print(AUC_boxplot)
-
 
 cairo_ps("./publication/figures/AUC_boxplot.eps", height = 3, width = 6)
 #png("./pub_figures/AUC_boxplot.png", height = 648, width = 648)
-
+print(AUC_boxplot)
 dev.off()
 
 # Fig 3 MCC boxplot  ----------------------------------------

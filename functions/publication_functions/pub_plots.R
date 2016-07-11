@@ -46,14 +46,15 @@ dev.off()
 # Fig 2 AUC boxplot  ----------------------------------------
 
 AUC_boxplot <- ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
-  geom_boxplot(outlier.color = "grey", outlier.shape = 1) +
+  geom_boxplot(outlier.color = "grey", outlier.shape = 1, outlier.size = 0.5) +
   geom_point(data = filter(amyloids_plot, et2 != "Encoding"), 
-             aes(x = len_range, y = AUC_mean, color = et2, shape = et2)) +
+             aes(x = len_range, y = AUC_mean, color = et2, shape = et2, size = et2)) +
   scale_x_discrete("") +
   scale_y_continuous("Mean AUC") +
   guides(color = guide_legend(nrow = 2), shape = guide_legend(nrow = 2)) +
   scale_shape_manual("", values = c(1, 16, 16, 17, 15), drop = FALSE) +
   scale_color_manual("", values = c("grey", "red", "green", "blue", "blue"), drop = FALSE) +
+  scale_size_manual("", values = c(0.5, 1, 1, 1.5, 1.5), drop = FALSE) +
   facet_wrap(~ pos, nrow = 3) +
   my_theme + 
   coord_flip() 

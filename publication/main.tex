@@ -102,7 +102,7 @@ well as other regions that are not directly responsible for the onset of
 aggregation process, although involved in the final aggregate. Several 
 computational approaches have been proposed to model and predict both kinds of 
 regions. Physics- and chemistry-based models used in  
-FoldAmyloid~\citep{garbuzynskiy_foldamyloid:_2010} utilize the density of the 
+FoldAmyloid and PASTA2~\citep{garbuzynskiy_foldamyloid:_2010} utilize the density of the 
 protein contact sites. Other methods perform threading a peptide on an amyloid 
 fiber backbone, followed by determination of its energy and 
 stability~\citep{odonnell_method_2011}. Statistical approaches include 
@@ -623,17 +623,11 @@ confidence interval.
 \end{figure*}
 
 The predictor based on the best-performing encoding had the AUC always in the fourth 
-quartile of all AUC values (Fig.~\ref{fig:AUC_boxplot}). It is reaching the highest AUCs
-
-It reached the highest AUC (0.8667) 
+quartile of all AUC values (Fig.~\ref{fig:AUC_boxplot}). It reached the highest AUC (0.8667) 
 in classification of the shortest sequences (with the length of 6 residues) when 
 the training set also consisted of the sequences of the same length. It results most 
-probably from the pattern homogeneity of the short peptide set. Nevertheless, the results 
-were quite comparable even if the training set contained longer sequences. On
-average, the majority of encodings behaved like the selected encoding and also 
-received higher AUC when tested on the shorter sequences than for the longer ones. 
-For the best-performing encoding, the most problematic was the correct 
-prediction of the amyloidogenicity in the longest peptides, ranging from 16 to 25 
+probably from the pattern homogeneity of the short peptide set. The most problematic was the 
+correct prediction of the amyloidogenicity in the longest peptides, ranging from 16 to 25 
 residues, when the algorithm was trained also on longer peptides (6-10 and 6-15 
 data sets). Here the AUC value did not exceed 0.77.
 
@@ -647,27 +641,12 @@ but all of them are marked as amyloids. However, despite this problem, the
 overall prediction of classifiers learned on the long sequences was still 
 adequate, with the mean values of AUC higher than 0.7 for every testing set. 
 
-
   We also evaluated classifiers based on the full (i.e., unreduced) amino acid 
-alphabet. In most cases, they were also placed in the fourth quartile of the AUC 
+alphabet. In most cases, they were placed in the fourth quartile of the AUC 
 values (Fig.~\ref{fig:AUC_boxplot}). Nevertheless, they never predicted 
 amyloidogenicity better than the best classifier based on the reduced alphabet. 
-It indicates that despite an abundance of information present in the full alphabet, the selected
-encoding allows for better generalization of the prediction rules and in the 
-consequence the better performance.
-
-% * <kotulska@gmail.com> 2016-06-12T14:15:56.081Z:
-%
-% > non-amyloidogenic 
-% > sequences than amyloids.
-%
-% tutaj są terminy z 2 różnych zestawów: amyloid i non-amyloido-"genic". Chyba raczej bez "genic" bo cały czas jednak testowanie sie odbywa na amyloidach, nie hot-spotach, których do konca nie znamy?
-%
-% ^ <michalburdukiewicz@gmail.com> 2016-06-12T19:26:22.284Z:
-%
-% sluszna uwaga, zmieniono
-%
-% ^.
+It implies, that the amyloidogenicity can be described more accurately using less 
+than 20 amino acids.
 
 \subsection{The best-performing encoding and important n-grams}
 
@@ -785,8 +764,8 @@ AmyloGram & \textbf{0.8972} & \textbf{0.6307} & 0.8658 & 0.7889 \\
 \end{table}
 
 The benchmark covered AmyloGram as well as the three peer-reviewed predictors of 
-amyloidogenicity: PASTA2~\citep{walsh_pasta_2014}, 
-FoldAmyloid~\citep{garbuzynskiy_foldamyloid:_2010} and 
+amyloidogenicity: physical models included in PASTA2~\citep{walsh_pasta_2014} and 
+FoldAmyloid~\citep{garbuzynskiy_foldamyloid:_2010} as well as based on neural networks 
 APPNN~\citep{familia_prediction_2015}. Other classifiers published before were 
 not included in the benchmark because their performance on \textit{pep424} 
 data set is already known and lower than the performance of PASTA2 and 
@@ -868,7 +847,15 @@ Our studies confirm that the most important physicochemical properties associate
 with amyloidogenicity are hydrophobicity and tendency to forming $\beta$-sheets.  
 We additionally discovered that amino acid flexibility can also sufficiently 
 discriminate amyloid and non-amyloid peptides. The aggregating peptides tend to
-be characterized by more rigid chains.  
+be characterized by more rigid chains. 
+
+Polar and hydrophylic residues from group 2 (K, P, R) never occur in n-grams associated 
+with amyloidogenicity which is confirmed also by the experimental studies. On the contrary, 
+residues from group 6 (D, E, N, Q, S, T), also polar, are present in both in amyloidogenic 
+and non-amyloidogenic sequences. It seems plausible, that amino acids belonging to group 6 
+are necessary for the proper formation of hot spot, but must be completed by hydrophobic 
+residues from group 3 or 4. That means that hot spots are not totally hydrophobic and can 
+contain residues with different properties.
 
 Our findings can be helpful in understanding the process of amyloid aggregation 
 and recognition of peptides susceptible to the formation of amyloid aggregates involved 

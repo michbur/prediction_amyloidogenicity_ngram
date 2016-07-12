@@ -95,22 +95,20 @@ sequence.
 % Here citation
 %
 % ^ <pamac@smorfland.uni.wroc.pl> 2016-05-24T11:48:12.626Z.
-  It is important to distinguish between amyloidogenic and amyloid (or 
-amyloidic) peptides, because only the former are capable of initiating the 
-process of aggregation. The latter may consist of amyloidogenic hot-spots as 
-well as other regions that are not directly responsible for the onset of 
-aggregation process, although involved in the final aggregate. Several 
+  It is important to distinguish between amyloidogenic and amyloid (or amyloidic) peptides, 
+because only the former are capable of initiating the process of aggregation. The latter 
+may consist of amyloidogenic hot-spots as well as other regions that are not directly responsible for the onset of aggregation process, although involved in the final aggregate. Several 
 computational approaches have been proposed to model and predict both kinds of 
 regions. Physics- and chemistry-based models used in  
 FoldAmyloid~\citep{garbuzynskiy_foldamyloid:_2010} utilize the density of the 
 protein contact sites. Other methods perform threading a peptide on an amyloid 
 fiber backbone, followed by determination of its energy and 
-stability~\citep{odonnell_method_2011}. Statistical approaches include 
-production of frequency profiles, such as the WALTZ method 
-\citep{beerten_waltz-db:_2015} and machine learning methods, for example those 
-developed in our group \citep{stanislawski_machine_2013, gasior_fish_2014}. 
-AGGRESCAN3D was proposed to estimate more accurately aggregation propensity by 
-performing 3D structure based analysis~\citep{zambrano_aggrescan3d_2015}. 
+stability~\citep{odonnell_method_2011}. Statistical approaches include production of frequency 
+profiles, such as the WALTZ method \citep{beerten_waltz-db:_2015} and machine 
+learning methods, for example those developed in our group 
+\citep{stanislawski_machine_2013, gasior_fish_2014}. AGGRESCAN3D was 
+proposed to estimate more accurately aggregation propensity by performing 3D 
+structure based analysis~\citep{zambrano_aggrescan3d_2015}. 
 
 
 % * <kotulska@gmail.com> 2016-06-12T07:45:50.734Z:
@@ -308,27 +306,15 @@ G) Training of a random forest classifier using the n-grams selected in the prev
 step.}\label{fig:ngram_scheme} 
 \end{figure*}
 
-In the initial phase, we extracted overlapping hexamers from all peptides. Each 
-hexamer was tagged with one of two etiquettes: amyloid (positive, i.e. 
-originating from an amyloid peptide) or non-amyloid (negative, i.e. originating 
-from a non-amyloid peptide). The etiquette ascribed to the hexamer was based on 
-the amyloid propensity of its source peptide (Fig.~\ref{fig:ngram_scheme} A and 
-B). The hexapeptides constituted our training dataset. 
+In the initial phase, we extracted overlapping hexamers from all peptides. 
+Each hexamer was tagged with one of two etiquettes: amyloid (positive, i.e. originating from an amyloid peptide) or non-amyloid (negative, i.e. originating from a non-amyloid peptide). The etiquette ascribed to the hexamer was based on the amyloid propensity of its source peptide (Fig.~\ref{fig:ngram_scheme} A and B). The hexapeptides constituted our training dataset. 
 
-  Note that amyloid and non-amyloid elements of the set are not necessarily 
-amyloidogenic or non-amyloidogenic, respectively. Hence, assuming that only a 
-short part of the sequence in longer amyloids is responsible for 
-amyloidogenicity, our method might result in many false positives in the 
-training data set and in consequence yield inaccurate predictions as it was 
-evaluated elsewhere \citep{kotulska_amyloid_2013}. To diminish this problem and 
-facilitate the extraction of hot spots, we restricted the maximum length of 
-peptides in the training data set to fifteen amino acids. This procedure should 
-eliminate the problem of false negatives and reduce the number of false 
-positives. Moreover, we expect that this  influence of false positives  would be 
-naturally eliminated or significantly reduced from the pattern finally found in 
-further steps of our method. On the other hand, allowing this ambiguity included 
-many hexamers of potentially high amyloidogenicity, whose propensity has not 
-been experimentally proven. 
+  Note that amyloid and non-amyloid elements of the set are not necessarily amyloidogenic or non-amyloidogenic, respectively. Hence, assuming that only a short part of the sequence in longer amyloids is 
+responsible for amyloidogenicity, our method might result in many false 
+positives in the training data set and in consequence yield inaccurate 
+predictions as it was evaluated elsewhere \citep{kotulska_amyloid_2013}. To 
+diminish this problem and facilitate the extraction of hot spots, we restricted 
+the maximum length of peptides in the training data set to fifteen amino acids. This procedure should eliminate the problem of false negatives and reduce the number of false positives. Moreover, we expect that this  influence of false positives  would be naturally eliminated or significantly reduced from the pattern finally found in further steps of our method. On the other hand, allowing this ambiguity included many hexamers of potentially high amyloidogenicity, whose propensity has not been experimentally proven. 
 % * <kotulska@gmail.com> 2016-06-12T11:32:21.027Z:
 %
 % > This procedure should eliminate the problem of false negatives and reduce the number of false positives. Moreover, we expect that this  influence of false positives  would be naturally eliminated or significantly reduced from the pattern finally found in further steps of our method. On the other hand, allowing this ambiguity included many hexamers of potentially high amyloidogenicity, whose propensity has not been experimentally proven. 
@@ -415,18 +401,10 @@ to 120, 260, 480 and 798 for encodings of length 3, 4, 5 and 6, respectively.
 
 \subsection{Quick Permutation Test (QuiPT)}
 
-  The permutation tests are commonly used for filtering important n-grams 
-testing hypothesis that the presence of n-gram and the target are independent. 
+  The permutation tests are commonly used for filtering important n-grams testing hypothesis that the presence of n-gram and the target are independent. 
 However, they are computationally expensive and, as a result, they often become 
-one of the most limiting factors in these kinds of analyses. Therefore, we 
-developed the Quick Permutation Test which effectively filters n-gram features, 
-without performing a huge number of permutations, using the information gain 
-(mutual information) as the criterion of the importance of a specific n-gram. We 
-used it to select the most discriminating n-grams extracted from the hexamers of 
-the training data set. The counts of n-grams were binarized (1 if n-gram was 
-present, 0 if absent). Only n-grams with the p-value smaller than 0.05 were 
-assumed to be informative (Fig.~\ref{fig:ngram_scheme} F). 
-% *<kotulska@gmail.com> 2016-06-12T11:27:51.651Z:
+one of the most limiting factors in these kinds of analyses. Therefore, we developed the Quick Permutation Test which effectively filters n-gram features, without performing a huge number of permutations, using the information gain (mutual information) as the criterion of the importance of a specific n-gram. We used it to select the most discriminating n-grams extracted from the hexamers of the training data set. The counts of n-grams were binarized (1 if n-gram was present, 0 if absent). Only n-grams with the p-value smaller than 0.05 were assumed to be informative (Fig.~\ref{fig:ngram_scheme} F).
+% * <kotulska@gmail.com> 2016-06-12T11:27:51.651Z:
 %
 % > counts
 %

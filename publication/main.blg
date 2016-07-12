@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: amyloids.bib
+You've used 36 entries,
+            1935 wiz_defined-function locations,
+            693 strings with 10422 characters,
+and the built_in function-call counts, 15066 in all, are:
+= -- 1500
+> -- 615
+< -- 24
++ -- 216
+- -- 204
+* -- 1363
+:= -- 2588
+add.period$ -- 109
+call.type$ -- 36
+change.case$ -- 281
+chr.to.int$ -- 36
+cite$ -- 36
+duplicate$ -- 528
+empty$ -- 1039
+format.name$ -- 278
+if$ -- 2917
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 37
+newline$ -- 184
+num.names$ -- 108
+pop$ -- 200
+preamble$ -- 1
+purify$ -- 282
+quote$ -- 0
+skip$ -- 417
+stack$ -- 0
+substring$ -- 1187
+swap$ -- 62
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 214
+warning$ -- 0
+while$ -- 131
+width$ -- 0
+write$ -- 470

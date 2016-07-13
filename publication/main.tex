@@ -211,13 +211,15 @@ step.}\label{fig:ngram_scheme}
 \centering
 \small
 \caption{Characteristics of training and test data sets used in the 
-cross-validation. All sequences were derived from AmyLoad database.}
+cross-validation. All sequences were derived from AmyLoad database. Training 
+data sets are partially overlapping (e.g. $[6, 10]$ contains also sequences 
+from $[6, 7)$). Test data sets are always disjointed.}
 \label{tab:data_sets}
 \begin{tabular}{cccll}
 \toprule
 Set & Sequence length & Status & Sequences & Hexamers \\ 
 \midrule
-\multirow{6}{*}{Training} & \multirow{2}{*}{6} & Non-amyloid & 841 & 841 
+\multirow{6}{*}{Training} & \multirow{2}{*}{[6-7)} & Non-amyloid & 841 & 841 
 \\
  &  & \cellcolor[gray]{0.85}Amyloid & \cellcolor[gray]{0.85}247 & 
 \cellcolor[gray]{0.85}247 \\
@@ -425,16 +427,16 @@ to 120, 260, 480 and 798 for encodings of length 3, 4, 5 and 6, respectively.
 \subsection{Quick Permutation Test (QuiPT)}
 
   The permutation tests are commonly used for filtering important n-grams 
-testing hypothesis that the presence of n-gram and the target are independent. 
-However, they are computationally expensive and, as a result, they often become 
-one of the most limiting factors in these kinds of analyses. Therefore, we 
-developed the Quick Permutation Test which effectively filters n-gram features, 
-without performing a huge number of permutations, using the information gain 
-(mutual information) as the criterion of the importance of a specific n-gram. We 
-used it to select the most discriminating n-grams extracted from the hexamers of 
-the training data set. The counts of n-grams were binarized (1 if n-gram was 
-present, 0 if absent). Only n-grams with the p-value smaller than 0.05 were 
-assumed to be informative (Fig.~\ref{fig:ngram_scheme} F). 
+testing hypothesis that the presence of n-gram and the target value are 
+independent. However, they are computationally expensive and, as a result, they 
+often become one of the most limiting factors in these kinds of analyses. 
+Therefore, we developed the Quick Permutation Test which effectively filters 
+n-gram features, without performing a huge number of permutations, using the 
+information gain (mutual information) as the criterion of the importance of a 
+specific n-gram. We used it to select the most discriminating n-grams extracted 
+from the hexamers of the training data set. The counts of n-grams were binarized 
+(1 if n-gram was present, 0 if absent). Only n-grams with the p-value smaller 
+than 0.05 were assumed to be informative (Fig.~\ref{fig:ngram_scheme} F). 
 % *<kotulska@gmail.com> 2016-06-12T11:27:51.651Z:
 %
 % > counts
@@ -553,44 +555,19 @@ length in the training set that provided the best AUC in the cross-validation.
 
 \subsection{Benchmark of AmyloGram}
 
-The best-performing encoding that had been chosen during the cross-validation was later used 
-% * <kotulska@gmail.com> 2016-06-12T13:48:26.688Z:
-%
-% > The best-performing encoding chosen during the cross-validation was later used 
-% > to train AmyloGram, n-gram based predictor of peptide amyloidogenicity.
-%
-% To zdanie wydaje mi się niezrozumiałe. Słowo cross-validation sugeruje, że coś już było uczone na zbiorze trenującym. Może dodać, że "used to train the AmyloGram at the random forest stage". Czy o to chodziło?e randon-forest 
-%
-% ^ <michalburdukiewicz@gmail.com> 2016-06-12T18:58:30.056Z:
-%
-% chodzi o to, że najlepszy encoding z cross-validation wykorzystujemy, aby wyuczyć klasyfikator, który nazywamy AmyloGram
-%
-% ^.
-to train AmyloGram, n-gram based predictor of peptide amyloidogenicity.
+The best-performing encoding that had been chosen during the cross-validation of 
+encodings was later used to train AmyloGram, n-gram based predictor of peptide 
+amyloidogenicity.
 
   To compare the performance of AmyloGram and other predictors of amyloids, we 
 used external data set \textit{pep424}~\citep{walsh_pasta_2014}. Since some 
 peptides were common for both \textit{pep424} and AmyLoad, we removed them from 
 the training data set. After the purification, the training data set for 
-% * <kotulska@gmail.com> 2016-06-12T13:51:07.110Z:
-%
-% > earning
-%
-% training, o ile nie ma innego podtekstu
-%
-% ^.
 the benchmark consisted of 269 positive sequences and 746 negative 
 sequences, all longer than five and shorter than fifteen residues. Aside from the 
-removal of sequences, the training set of AmyloGram was identical to the training 
-% * <kotulska@gmail.com> 2016-06-12T13:52:14.029Z:
-%
-% > learning
-%
-% jak wyzej
-%
-% ^.
+removal of sequences, the training set of AmyloGram was identical to the training of
 classifiers during the cross-validation. The parameters of QuiPT and random forest 
-algorithms were kept the same.
+algorithms were kept the same. 
 
   We removed peptides shorter than five amino acids from the \textit{pep424} 
 data set as our model of amyloidogenicity assumes the minimal length of six 

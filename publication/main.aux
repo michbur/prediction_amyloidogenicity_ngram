@@ -47,35 +47,35 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:ngram_scheme}{{1}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Training sets}{3}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Characteristics of training and test data sets used in the cross-validation. All sequences were derived from AmyLoad database.\relax }}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Characteristics of training and test data sets used in the cross-validation. All sequences were derived from AmyLoad database. Training data sets are partially overlapping (e.g. $[6, 10]$ contains also sequences from $[6, 7)$). Test data sets are always disjointed.\relax }}{4}}
 \newlabel{tab:data_sets}{{1}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Selected 17 physicochemical properties used to create amino acid encodings.\relax }}{4}}
-\newlabel{tab:properties}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Quick Permutation Test (QuiPT)}{4}}
 \citation{lehmann_testing_2008}
 \citation{wright_ranger:_2015}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Quick Permutation Test (QuiPT)}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Selected 17 physicochemical properties used to create amino acid encodings.\relax }}{5}}
+\newlabel{tab:properties}{{2}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Cross-validation of encodings}{5}}
 \citation{walsh_pasta_2014}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Benchmark of AmyloGram}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results and discussion}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Performance of the best encoding}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of mean AUC values of classifiers with various encodings for every possible combination of training and testing data set including different lengths of sequences. The left and right hinges of boxes correspond to the 0.25 and 0.75 quartiles. The bar inside the box represents the median. The gray circles correspond to the encodings with the AUC outside the 0.95 confidence interval. \relax }}{6}}
-\newlabel{fig:AUC_boxplot}{{2}{6}}
 \citation{lopez_de_la_paz_sequence_2004}
 \citation{lopez_de_la_paz_sequence_2004}
 \citation{argos_structural_1982}
 \citation{bhaskaran_positional_1988}
 \citation{charton_structural_1982}
 \citation{kim_thermodynamic_1993}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The best-performing encoding and important n-grams}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The frequency of important n-grams used by the best-performing classifier in amyloid and non-amyloid sequences. The elements of n-grams are amino acids encoded using the best-performing reduced amino acid alphabet. A vertical bar represents a gap in a n-gram between its elements. The frequency was computed using the total number of occurrences divided by the number of possible n-grams of their length. Dots and triangles denote n-grams occurring in motifs found in respectively amyloidogenic and non-amyloidogenic sequences~\citep  {lopez_de_la_paz_sequence_2004}.\relax }}{7}}
-\newlabel{fig:ngrams}{{3}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Benchmark of AmyloGram}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results and discussion}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Performance of the best encoding}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The best-performing encoding and important n-grams}{6}}
 \citation{lopez_de_la_paz_sequence_2004}
 \citation{walsh_pasta_2014}
 \citation{garbuzynskiy_foldamyloid:_2010}
 \citation{familia_prediction_2015}
 \citation{walsh_pasta_2014}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Benchmark of AmyloGram}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of mean AUC values of classifiers with various encodings for every possible combination of training and testing data set including different lengths of sequences. The left and right hinges of boxes correspond to the 0.25 and 0.75 quartiles. The bar inside the box represents the median. The gray circles correspond to the encodings with the AUC outside the 0.95 confidence interval. \relax }}{7}}
+\newlabel{fig:AUC_boxplot}{{2}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Benchmark of AmyloGram}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The frequency of important n-grams used by the best-performing classifier in amyloid and non-amyloid sequences. The elements of n-grams are amino acids encoded using the best-performing reduced amino acid alphabet. A vertical bar represents a gap in a n-gram between its elements. The frequency was computed using the total number of occurrences divided by the number of possible n-grams of their length. Dots and triangles denote n-grams occurring in motifs found in respectively amyloidogenic and non-amyloidogenic sequences~\citep  {lopez_de_la_paz_sequence_2004}.\relax }}{8}}
+\newlabel{fig:ngrams}{{3}{8}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Results of benchmark on \textit  {pep424} data set for PASTA2, FoldAmyloid, AmyloGram and its version learned on n-grams extracted for full amino acid alphabet from the sequences of the lengths specified in the brackets.\relax }}{8}}
 \newlabel{tab:bench_summary}{{3}{8}}
 \bibdata{amyloids}

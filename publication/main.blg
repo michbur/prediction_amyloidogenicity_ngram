@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: amyloids.bib
-You've used 36 entries,
+You've used 35 entries,
             1935 wiz_defined-function locations,
-            701 strings with 10675 characters,
-and the built_in function-call counts, 15135 in all, are:
-= -- 1499
-> -- 650
+            697 strings with 10483 characters,
+and the built_in function-call counts, 14769 in all, are:
+= -- 1465
+> -- 632
 < -- 24
-+ -- 226
-- -- 218
-* -- 1385
-:= -- 2621
-add.period$ -- 109
-call.type$ -- 36
-change.case$ -- 288
-chr.to.int$ -- 36
-cite$ -- 36
-duplicate$ -- 514
-empty$ -- 1028
-format.name$ -- 294
-if$ -- 2909
++ -- 220
+- -- 212
+* -- 1353
+:= -- 2553
+add.period$ -- 106
+call.type$ -- 35
+change.case$ -- 280
+chr.to.int$ -- 35
+cite$ -- 35
+duplicate$ -- 500
+empty$ -- 1004
+format.name$ -- 287
+if$ -- 2840
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 184
-num.names$ -- 108
-pop$ -- 205
+missing$ -- 36
+newline$ -- 179
+num.names$ -- 105
+pop$ -- 199
 preamble$ -- 1
-purify$ -- 289
+purify$ -- 281
 quote$ -- 0
-skip$ -- 401
+skip$ -- 391
 stack$ -- 0
-substring$ -- 1172
-swap$ -- 49
+substring$ -- 1154
+swap$ -- 48
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
+type$ -- 208
 warning$ -- 0
-while$ -- 131
+while$ -- 128
 width$ -- 0
-write$ -- 469
+write$ -- 456

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.13)  13 JUL 2016 13:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.7.13)  14 JUL 2016 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,19 +662,19 @@ e
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -734,8 +734,8 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 37.
-LaTeX Info: Redefining \microtypecontext on input line 37.
+(lastpage)             ! on input line 53.
+LaTeX Info: Redefining \microtypecontext on input line 53.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -755,9 +755,9 @@ Package microtype Info: Loading generic settings for font family
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 41.
+(Font)              size <20.74> substituted on input line 57.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -765,7 +765,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 41
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 57
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
@@ -775,30 +775,30 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 41
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 57
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 41
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 57
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 41
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 57
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -807,13 +807,13 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -826,7 +826,7 @@ Package epstopdf Info: Source file: <figures/ngram_scheme.eps>
 (epstopdf)                    size: 34108 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ngram_scheme-eps-c
 onverted-to.pdf figures/ngram_scheme.eps>
-(epstopdf)             \includegraphics on input line 186.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/ngram_scheme-eps-converted-to.pdf, id=11, 386.44376pt x 811.03pt>
@@ -834,17 +834,11 @@ File: figures/ngram_scheme-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ngram_scheme-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ngram_scheme-eps-converted-to.pdf used on inpu
-t line 186.
+t line 161.
 (pdftex.def)             Requested size: 119.50279pt x 250.79793pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (3.19173pt too wide) in paragraph at lines 264--277
-[]\OT1/ptm/m/n/10 (-20) The fi-nal data set con-tained in to-tal 1430 pep-tides
-: 397 amy-loido-genic and 1033 non-amyloidogenic
- []
 
 [2] [3 <./figures/ngram_scheme-eps-converted-to.pdf>] [4] [5]
 Package epstopdf Info: Source file: <figures/AUC_boxplot.eps>
@@ -855,7 +849,7 @@ Package epstopdf Info: Source file: <figures/AUC_boxplot.eps>
 (epstopdf)                    size: 154304 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/AUC_boxplot-eps-co
 nverted-to.pdf figures/AUC_boxplot.eps>
-(epstopdf)             \includegraphics on input line 588.
+(epstopdf)             \includegraphics on input line 510.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/AUC_boxplot-eps-converted-to.pdf, id=42, 433.62pt x 216.81pt>
@@ -863,12 +857,9 @@ File: figures/AUC_boxplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/AUC_boxplot-eps-converted-to.pdf>
 Package pdftex.def Info: figures/AUC_boxplot-eps-converted-to.pdf used on input
- line 588.
+ line 510.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [6 <./figures/AUC_boxplot-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/ngrams.eps>
 (epstopdf)                    date: 2016-07-11 09:03:43
 (epstopdf)                    size: 78698 bytes
@@ -877,22 +868,18 @@ Package epstopdf Info: Source file: <figures/ngrams.eps>
 (epstopdf)                    size: 23857 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/ngrams-eps-convert
 ed-to.pdf figures/ngrams.eps>
-(epstopdf)             \includegraphics on input line 632.
+(epstopdf)             \includegraphics on input line 554.
 Package epstopdf Info: Output file is already uptodate.
-<figures/ngrams-eps-converted-to.pdf, id=43, 433.62pt x 144.54pt>
+
+<figures/ngrams-eps-converted-to.pdf, id=54, 433.62pt x 144.54pt>
 File: figures/ngrams-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ngrams-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ngrams-eps-converted-to.pdf used on input line
- 632.
+ 554.
 (pdftex.def)             Requested size: 433.61894pt x 144.53963pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] [7 <./figures/AUC_boxplot-eps-converted-to.pdf>] [8 <./figures/ngrams-eps-c
-onverted-to.pdf>]
-Overfull \hbox (2.86914pt too wide) in paragraph at lines 860--863
+ [7 <./figures/ngrams-eps-converted-to.pdf>] [8]
+Overfull \hbox (2.86914pt too wide) in paragraph at lines 740--745
 []\OT1/ptm/m/n/10 (-20) Our soft-ware is ac-ces-si-ble as the web server un-der
  ad-dress $www . smor^^Mand . uni . wroc . pl / amylogram/$.
  []
@@ -906,13 +893,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8846 strings out of 494920
- 128846 string characters out of 6179039
- 342990 words of memory out of 5000000
- 11674 multiletter control sequences out of 15000+600000
- 54504 words of font info for 221 fonts, out of 8000000 for 9000
+ 8841 strings out of 494920
+ 128729 string characters out of 6179039
+ 342900 words of memory out of 5000000
+ 11671 multiletter control sequences out of 15000+600000
+ 54437 words of font info for 220 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
- 43i,13n,45p,1432b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,13n,45p,1052b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -923,7 +910,7 @@ elvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 352593 bytes).
+Output written on main.pdf (10 pages, 352652 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream

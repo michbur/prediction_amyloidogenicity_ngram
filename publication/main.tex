@@ -321,11 +321,9 @@ adding two standard encodings: (1) ADEGHKNPQRST, C, FY, ILMV, W~\citep{kosiol_ne
 and (2) AG, C, DEKNPQRST, FILMVWY, H~\citep{melo_accuracy_2006}, to check if the process 
 of amyloidogenicity does require groupings different from more general 
 amino acid classifications. We also added the full (unreduced) amino acid 
-alphabet to 
-evaluate potential benefits of the alphabet reduction.
+alphabet to evaluate potential benefits of the alphabet reduction.
 
 \subsection{Training sets}
-
 
 In the initial phase, we extracted overlapping hexamers from all peptides. Each 
 hexamer was tagged with one of two etiquettes: amyloid (positive, i.e. 
@@ -369,7 +367,7 @@ for encodings of length 3, 4, 5 and 6, respectively.
 
 \subsection{Quick Permutation Test (QuiPT)}
 
-  The permutation tests are commonly used for filtering important n-grams 
+The permutation tests are commonly used for filtering important n-grams 
 testing hypothesis that an occurrence of n-gram and a value of a target are 
 independent. However, they are computationally expensive and, as a result, they 
 often become one of the most limiting factors in these kinds of analyses. 
@@ -381,7 +379,7 @@ from the hexamers of the training data set. The counts of n-grams were binarized
 (1 if n-gram was present, 0 if absent). Only n-grams with the p-value smaller 
 than 0.05 were assumed to be informative (Fig.~\ref{fig:ngram_scheme} F). 
 
-Let us consider a contingency table for a target $y$ and 
+  Let us consider a contingency table for a target $y$ and 
 a feature $x$. For example, the entry $n_{1,0}$ is the number of cases when the 
 target is $1$ and the feature is $0$.
 
@@ -738,7 +736,7 @@ No. 347. This research was partially funded by the KNOW Consortium and National
 Science Center (2015/17/N/NZ2/01845).
 
   Our software is accessible as the web server under address 
-\url{www.smorfland.uni.wroc.pl/amylogram/}. The web tool constists of AmyloGram 
+\url{www.smorfland.uni.wroc.pl/amylogram/}. The web tool consists of AmyloGram 
 (6-10). The threshold can be manually specified by an user. The code and 
 results are publicly available at: 
 \url{github.com/michbur/prediction_amyloidogenicity_ngram}.

@@ -27,13 +27,13 @@ Engineering, Faculty of Fundamental Problems of Technology}
 
 \keywords{n-gram, amyloid, prediction, random forest, feature selection}
 \begin{abstract}
-Amyloids are proteins associated with the number of clinical disorders (e.g., 
+  Amyloids are proteins associated with the number of clinical disorders (e.g., 
 Alzheimer's, Creutzfeldt-Jakob's and Huntington's diseases). Despite their 
 diversity, all amyloid proteins can undergo aggregation initiated by 6- to 
-\mbox{15-residue} segments called hot spots.  To find the patterns  defining the 
-hot-spots,  we trained predictors of  amyloidogenicity,  using n-grams and  
-random forest  classifiers, based on  data  collected in the  AmyLoad database.  
-Only the most  informative n-grams,  selected by our Quick  Permutation Test, 
+\mbox{15-residue} segments, called hot spots.  To find the patterns  defining 
+the hot-spots,  we trained predictors of  amyloidogenicity,  using n-grams and  
+random forest classifiers, based on  data  collected in the  AmyLoad database.  
+Only the most informative n-grams, selected by our Quick  Permutation Test, 
 were  considered. Since the amyloidogenicity may not depend on the exact 
 sequence of amino acids but on more general properties of amino acids, we tested 
 524,284 reduced amino acid alphabets of different lengths (three to six letters) 
@@ -41,12 +41,12 @@ to find the alphabet providing the best performance in cross-validation. The
 predictor based on this alphabet, called AmyloGram, was benchmarked against the 
 most popular tools for the detection of amyloid peptides using an external data 
 set and obtained the highest values of performance measures (AUC: 0.90, MCC: 
-0.63). Our results showed sequential patterns in the amyloids which are strongly 
-correlated with hydrophobicity, a tendency to form $\beta$-sheets and rigidity 
-of amino acid residues. Among the most informative n-grams of AmyloGram we 
-identified 15 that were already confirmed experimentally. AmyloGram is available 
-as a web-server: \url{www.smorfland.uni.wroc.pl/amylogram/}. The code and 
-results are publicly available at: 
+0.63). Our results showed sequential patterns in the amyloids, which are 
+strongly correlated with hydrophobicity, a tendency to form $\beta$-sheets and 
+rigidity of amino acid residues. Among the most informative n-grams of AmyloGram 
+we identified 15 that were already confirmed experimentally. AmyloGram is 
+available as a web-server: \url{www.smorfland.uni.wroc.pl/amylogram/}. The code 
+and results are publicly available at: 
 \url{github.com/michbur/prediction_amyloidogenicity_ngram}.
 \end{abstract}
 
@@ -128,8 +128,8 @@ properties of peptides.
 
   Several studies highlighted that three-dimensional protein structure depends 
 not only on the exact sequence of amino acids but also on their general 
-physicochemical properties. Hence, a reducedamino acid alphabet (encoding), 
-which represents certain subgroups of aminoacids, can still retain the 
+physicochemical properties. Hence, a reduced amino acid alphabet (encoding), 
+which represents certain subgroups of amino acids, can still retain the 
 information about the protein folding~\citep{murphy_simplified_2000}. Since 
 amyloid aggregates, especially their hot spot regions, have very specific 
 spatial organization, we investigated if these regions can be described by a 
@@ -228,8 +228,8 @@ Set & Sequence length & Status & Sequences & Hexamers \\
 \end{table}
 
 The data used in the study was extracted from AmyLoad data 
-base~\citep{wozniak_amyload:_2015}. We obtained 418 amyloidogenic peptides and 
-1039 non-amyloidogenic peptides.
+base~\citep{wozniak_amyload:_2015}. We obtained 418 amyloid peptides and 
+1039 non-amyloid peptides.
 
   Sequences shorter than six and longer than 25 amino acid residues (i.e., 8 and 
 27 sequences, respectively) were removed from the set. The former were too short 
@@ -347,8 +347,8 @@ further steps of our method. On the other hand, allowing this ambiguity did not 
 many hexamers of potentially high amyloidogenicity, whose propensity has not 
 been experimentally proven. 
 
-  To further study the problem of the amyloidogenicity signal length, we 
-created three training sets with the sequences of varying lengths 
+  To further study the problem of the length of the amyloidogenicity signal, 
+we created three training sets with the sequences of varying lengths 
 (Tab.~\ref{tab:data_sets}). The smallest data set contained only the sequences 
 of length 6. Assuming that the minimum length of the amyloidogenicity signal is 
 the six residues, we can expect no false positive hexamers in this set. 
@@ -580,21 +580,28 @@ subgroup, whereas the least flexible amino acids are in the subgroup 4 and 5.
 The glycine has also the lowest propensity to form $\beta$-sheet and the 
 subgroups 3 and 4 largest. 
 
-  We found 65 n-grams that had  obtained p-values smaller than 0.05 in QuiPT 
-test in all repetitions of cross-validation, regardless of the lengths of 
-sequences in the training set (see Fig.~\ref{fig:ngrams}). The frequency of the 
-n-grams was computed for all sequences derived from AmyLoad . The n-grams 
-typical of amyloidogenic sequences (with the highest frequency occurrence in 
-amyloids) mostly include highly hydrophobic amino acids with tendency to form 
+  We found 65 n-grams that had obtained p-values smaller than 0.05 in QuiPT test 
+in all repetitions of cross-validation, regardless of the lengths of sequences 
+in the training set (see Fig.~\ref{fig:ngrams}). The frequency of the n-grams 
+was computed for all sequences derived from AmyLoad. The n-grams typical for 
+amyloidogenic sequences (with the highest frequency of occurrence in amyloids) 
+mostly include highly hydrophobic amino acids with tendency to form 
 $\beta$-structures, from subgroups 3 and 4. The n-grams occurring frequently in 
 amyloids have often repeats of amino acids from the subgroup 3, suggesting that 
 the presence of these amino acids in the vicinity might be one of the most 
-effective predictors of amyloidogenicity.
+effective predictors of amyloidogenicity. Hydrophobic and aromatic residues from 
+the subgroup 4 are much less prevalent and never form repeats, but often 
+co-occur with amino acids from the subgroup 3. 
 
-  On the other hand, n-grams typical of non-amyloidogenic peptides have mostly 
-amino acids belonging to subgroups 2 and 6. These subgroups include strongly 
-hydrophilic and highly flexible amino acids (K, P, R, D, E), which hamper the 
-formation of $\beta$-structures.
+  n-grams typical of non-amyloidogenic peptides have mostly one or 
+more amino acids belonging to subgroups 2 or 6. These subgroups include 
+strongly hydrophilic and highly flexible amino acids (K, P, R, D, E), which 
+hamper the formation of $\beta$-structures. We observed that non-amyloidogenic 
+n-grams usually contain more than one residue from one or two subgroups. Strong 
+breakers of $\beta$-structures as K, P and R, belonging to the subgroup 2 are 
+never present in amyloidogenic n-grams. In contrast, amino acids from subgroup 
+6 may rarely occur at the start or the end of such motifs, but are always 
+balanced by a one or more hydrophobic residues.
 
   Out of 65 the most informative n-grams, 15 (23\%) were also found in the motifs 
 validated experimentally for amyloidogenic and non-amyloidogenic 
@@ -706,11 +713,12 @@ tyrosine, tryptophan)  are good predictors of amyloid peptides.
 associated with amyloidogenicity which is confirmed also by the experimental 
 studies. On the contrary, residues from group 6 (D, E, N, Q, S, T), also polar, 
 are present in both in amyloidogenic and non-amyloidogenic sequences. It seems 
-plausible, that amino acids belonging to group 6 are necessary for the proper 
-formation of some hot spots, but must be complemented by hydrophobic residues 
-from the group 3 or 4. That means that hot spots are not completely hydrophobic 
-and may contain a fraction of hydrophilic residues with the exclusion for known 
-breakers of $\beta$-structures as lysine, proline and arginine.
+plausible, that amino acids belonging to the subgroup 6 are necessary for the 
+proper formation of some hot spots (hence their terminal position), but must be 
+complemented by hydrophobic residues from the group 3 or 4. That means that hot 
+spots are not completely hydrophobic and may contain a fraction of hydrophilic 
+residues with the exclusion for known breakers of $\beta$-structures as lysine, 
+proline and arginine.
 
   Our studies confirm that the most important physicochemical properties 
 associated with amyloidogenicity are hydrophobicity and tendency to forming 

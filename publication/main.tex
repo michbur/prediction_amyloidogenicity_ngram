@@ -158,7 +158,7 @@ amyloidogenic regions.
 \section{Methods}
 
 \begin{figure*}[bth]
-\centerline{\includegraphics[width=0.3\linewidth]{figures/ngram_scheme.eps}} 
+\centerline{\includegraphics[width=0.7\linewidth]{figures/fig2.eps}} 
 \caption{The scheme of n-gram extraction from studied peptide sequences. 
 A) Source data: peptides with known amyloidicity status and indicated 
 overlapping hexamers. 
@@ -666,14 +666,17 @@ specificity 0.9519 is close to the value provided by its authors (0.95) and
 assures correctness of our computations. For other classifiers, including 
 AmyloGram, we assumed a default 0.5 cut-off.
     
-  In the case of the studied data set, the n-gram extraction method appeared 
-efficient enough to produce classifiers able to outperform other published 
-methods. AmyloGram showed the highest AUC and MCC among all tested classifiers. 
-It should be noted that it outperformed its counterparts trained on full amino 
-acid alphabet. It is important to highlight that AmyloGram is the most balanced 
-tool among all analyzed classifiers, having the best specificity/sensitivity 
-trade-off, as indicated by the value of MCC.
- 
+  In the case of the studied data set, the n-gram extraction combined with the 
+reduction of the alphabet appeared efficient enough to produce classifiers able 
+to outperform other published methods. AmyloGram showed the highest AUC and MCC 
+among all tested classifiers. It should be noted that it outperformed its 
+counterparts trained on full amino acid alphabet. The reduction of the 
+alphabet not only reduced number of features making the analysis more 
+straightforward, but putatively also allows generating more universal and more 
+precise prediction rules. It is important to highlight that AmyloGram 
+is the most balanced tool among all analyzed classifiers, having the best 
+specificity/sensitivity trade-off, as indicated by the value of MCC.
+
   The specificity of AmyloGram is lower than the specificity of PASTA2 but it is 
 a consequence of the usage of the threshold value optimized for 0.95 specificity 
 for the latter. If we assume for the AmyloGram the same threshold for the 

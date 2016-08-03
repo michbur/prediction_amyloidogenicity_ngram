@@ -157,7 +157,7 @@ amyloidogenic regions.
 
 \section{Methods}
 
-\begin{figure*}[bth]
+\begin{figure}[bth]
 \centerline{\includegraphics[width=0.7\linewidth]{figures/fig2.eps}} 
 \caption{The scheme of n-gram extraction from studied peptide sequences. 
 A) Source data: peptides with known amyloidicity status and indicated 
@@ -178,7 +178,7 @@ F) Selection of informative n-grams with Quick Permutation Test (QuiPT).
 G) Training of a random forest classifier using the n-grams selected in the 
 previous 
 step.}\label{fig:ngram_scheme} 
-\end{figure*}
+\end{figure}
 
 \subsection{Data set}
 
@@ -384,6 +384,7 @@ a feature $x$. For example, the entry $n_{1,0}$ is the number of cases when the
 target is $1$ and the feature is $0$.
 
 \begin{center}
+\small
 \begin{tabular}{ | c || c | c | c | }
 % * <kotulska@gmail.com> 2016-06-12T11:29:56.778Z:
 %
@@ -482,29 +483,29 @@ amyloidogenicity.
   To compare the performance of AmyloGram and other predictors of amyloids, we 
 used external data set \textit{pep424}~\citep{walsh_pasta_2014}. Since some 
 peptides were common for both \textit{pep424} and AmyLoad, we removed them from 
-the training data set. After the purification, the training data set for 
-the benchmark consisted of 269 positive sequences and 746 negative 
-sequences, all longer than five and shorter than fifteen residues. Aside from the 
-removal of sequences, the training set of AmyloGram was identical to the training of
-classifiers during the cross-validation. The parameters of QuiPT and random forest 
-algorithms were kept the same. 
+the training data set. After the purification, the training data set for the 
+benchmark consisted of 269 positive sequences and 746 negative sequences, all 
+longer than five and shorter than fifteen residues. Aside from the removal of 
+sequences, the training set of AmyloGram was identical to the training of 
+classifiers during the cross-validation. The parameters of QuiPT and random 
+forest algorithms were kept the same. 
 
   We removed peptides shorter than five amino acids from the \textit{pep424} 
 data set as our model of amyloidogenicity assumes the minimal length of six 
-residues. Such change should not have affect the outcome of the comparison because 
-only five sequences were eliminated (around 1\% of the original data set). 
-Beside the classifier based on the reduced amino acid alphabet, we also 
+residues. Such change should not have affect the outcome of the comparison 
+because only five sequences were eliminated (around 1\% of the original data 
+set). Beside the classifier based on the reduced amino acid alphabet, we also 
 benchmarked three predictors based on the full 20-amino acid alphabet learned on 
-n-grams extracted from sequences of different length ranges to separately 
-assess the benefit of using only the n-gram analysis without the reduction of 
-amino acid alphabet.
+n-grams extracted from sequences of different length ranges to separately assess 
+the benefit of using only the n-gram analysis without the reduction of amino 
+acid alphabet.
 
 \section{Results and discussion}
 
 
 \subsection{Performance of the best encoding}
 
-\begin{figure*}[h]
+\begin{figure}[h]
 \centerline{\includegraphics{figures/AUC_boxplot.eps}}
 \caption{Distribution of mean AUC values of classifiers with various encodings 
 for every possible combination of training and testing data set including 
@@ -515,7 +516,7 @@ gray circles correspond to the encodings with the AUC outside the 0.95
 confidence interval. 
 }\label{fig:AUC_boxplot}
 
-\end{figure*}
+\end{figure}
 
 The predictor based on the best-performing encoding had the AUC always in the 
 fourth quartile of all AUC values (Fig.~\ref{fig:AUC_boxplot}). It reached the 
@@ -548,7 +549,7 @@ physicochemical properties of residues and cannot be too general.
 \subsection{The best-performing encoding and important n-grams}
 
 
-\begin{figure*}[h]
+\begin{figure}[h]
 \centerline{\includegraphics{figures/ngrams.eps}}
 \caption{The frequency of important n-grams used by the best-performing 
 classifier in amyloid and non-amyloid sequences. The elements of n-grams are 
@@ -558,7 +559,7 @@ was computed using the total number of occurrences divided by the number of
 possible n-grams of their length. Dots and triangles denote n-grams occurring in 
 motifs found in respectively amyloidogenic and non-amyloidogenic 
 sequences~\citep{lopez_de_la_paz_sequence_2004}.}\label{fig:ngrams} 
-\end{figure*}
+\end{figure}
 
 In total, eleven combinations of physicochemical properties created the best 
 performing encoding. Only four features appeared in all combinations: 
@@ -656,9 +657,8 @@ FoldAmyloid~\citep{walsh_pasta_2014}.
   We analyzed AUC, Matthew's Correlation Coefficient (MCC), sensitivity and 
 specificity (see Tab.~\ref{tab:bench_summary}). We used default settings for 
 FoldAmyloid and APPNN. PASTA2 evaluated the input data in the 'Peptides' mode, 
-which is adviced by its authors for a peptide data.
-
-  Since PASTA2 does not return a probability of belonging to a specific 
+which is adviced by its authors for a peptide data. Since PASTA2 does not 
+return a probability of belonging to a specific 
 category, we normalized the output data to compute the AUC values. The advised 
 energy threshold (-5) was also normalized in the same manner and used as cut-off 
 in computations of specificity, sensitivity and MCC. The resulting value of 
@@ -671,8 +671,8 @@ reduction of the alphabet appeared efficient enough to produce classifiers able
 to outperform other published methods. AmyloGram showed the highest AUC and MCC 
 among all tested classifiers. It should be noted that it outperformed its 
 counterparts trained on full amino acid alphabet. The reduction of the 
-alphabet not only reduced number of features making the analysis more 
-straightforward, but putatively also allows generating more universal and more 
+alphabet not only reduced number of features simplyfying the analysis, but 
+putatively also helped in the generation of more
 precise prediction rules. It is important to highlight that AmyloGram 
 is the most balanced tool among all analyzed classifiers, having the best 
 specificity/sensitivity trade-off, as indicated by the value of MCC.

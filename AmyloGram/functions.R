@@ -35,6 +35,10 @@ make_AmyloGram <- function(seqs_list, ets, max_len, aa_group) {
 }
 
 predict_AmyloGram <- function(model, seqs_list) {
+  if(min(lengths(seqs_list)) < 6) {
+    stop("Sequences shorter than 6 residues cannot be processed.")
+  }
+  
   seqs_m <- tolower(t(sapply(seqs_list, function(i)
     c(i, rep(NA, max(lengths(seqs_list)) - length(i))))))
   

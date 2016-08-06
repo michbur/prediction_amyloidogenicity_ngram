@@ -48,7 +48,7 @@ shinyServer(function(input, output) {
   
   output$dynamic_ui <- renderUI({
     if(!is.null(prediction())) {
-      tags$p("Refresh page (press F5) to start a new query with signalHsmm.")
+      p(HTML("<A HREF=\"javascript:history.go(0)\">Start new session with AmyloGram.</A>"))
     }
   })
   

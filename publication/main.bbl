@@ -5,12 +5,6 @@ Argos, P., Rao, J.~K., and Hargrave, P.~A. (1982).
 \newblock Structural prediction of membrane-bound proteins.
 \newblock {\em European journal of biochemistry / FEBS}, 128(2-3):565--575.
 
-\bibitem[Beerten et~al., 2015]{beerten_waltz-db:_2015}
-Beerten, J., Van~Durme, J., Gallardo, R., Capriotti, E., Serpell, L., Rousseau,
-  F., and Schymkowitz, J. (2015).
-\newblock {WALTZ}-{DB}: a benchmark database of amyloidogenic hexapeptides.
-\newblock {\em Bioinformatics (Oxford, England)}, 31(10):1698--1700.
-
 \bibitem[Bhaskaran and Ponnuswamy, 1988]{bhaskaran_positional_1988}
 Bhaskaran, R. and Ponnuswamy, P. (1988).
 \newblock Positional flexibilities of amino acid residues in globular proteins.
@@ -32,6 +26,12 @@ Breiman, L. (2001).
 Charton, M. and Charton, B.~I. (1982).
 \newblock The structural dependence of amino acid hydrophobicity parameters.
 \newblock {\em Journal of Theoretical Biology}, 99(4):629--644.
+
+\bibitem[Chaturvedi et~al., 2016]{chaturvedi_protein_2016}
+Chaturvedi, S.~K., Siddiqi, M.~K., Alam, P., and Khan, R.~H. (2016).
+\newblock Protein misfolding and aggregation: {Mechanism}, factors and
+  detection.
+\newblock {\em Process Biochemistry}.
 
 \bibitem[Família et~al., 2015]{familia_prediction_2015}
 Família, C., Dennison, S.~R., Quintas, A., and Phoenix, D.~A. (2015).
@@ -92,7 +92,7 @@ Kosiol, C., Goldman, N., and Buttimore, N.~H. (2004).
 
 \bibitem[Kotulska and Unold, 2013]{kotulska_amyloid_2013}
 Kotulska, M. and Unold, O. (2013).
-\newblock On the amyloid datasets used for training {PAFIG} ­ how (not) to
+\newblock On the amyloid datasets used for training {PAFIG} - how (not) to
   extend the experimental dataset of hexapeptides.
 \newblock {\em BMC Bioinformatics}, 14:351.
 
@@ -106,6 +106,14 @@ López de~la Paz, M. and Serrano, L. (2004).
 \newblock Sequence determinants of amyloid fibril formation.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 101(1):87--92.
+
+\bibitem[Maurer-Stroh et~al., 2010]{maurer-stroh_exploring_2010}
+Maurer-Stroh, S., Debulpaep, M., Kuemmerer, N., de~la Paz, M.~L., Martins,
+  I.~C., Reumers, J., Morris, K.~L., Copland, A., Serpell, L., Serrano, L.,
+  Schymkowitz, J. W.~H., and Rousseau, F. (2010).
+\newblock Exploring the sequence determinants of amyloid structure using
+  position-specific scoring matrices.
+\newblock {\em Nature Methods}, 7(3):237--242.
 
 \bibitem[Melo and Marti-Renom, 2006]{melo_accuracy_2006}
 Melo, F. and Marti-Renom, M.~A. (2006).
@@ -124,12 +132,6 @@ Nishikawa, K. and Ooi, T. (1986).
 \newblock Radial locations of amino acid residues in a globular protein:
   correlation with the sequence.
 \newblock {\em Journal of Biochemistry}, 100(4):1043--1047.
-
-\bibitem[O'Donnell et~al., 2011]{odonnell_method_2011}
-O'Donnell, C.~W., Waldispühl, J., Lis, M., Halfmann, R., Devadas, S.,
-  Lindquist, S., and Berger, B. (2011).
-\newblock A method for probing the mutational landscape of amyloid structure.
-\newblock {\em Bioinformatics}, 27(13):i34--i42.
 
 \bibitem[Pontius et~al., 1996]{pontius_deviations_1996}
 Pontius, J., Richelle, J., and Wodak, S.~J. (1996).
@@ -150,11 +152,13 @@ Radzicka, A. and Wolfenden, R. (1988).
   aqueous solution.
 \newblock {\em Biochemistry}, 27(5):1664--1670.
 
-\bibitem[Stanislawski et~al., 2013]{stanislawski_machine_2013}
-Stanislawski, J., Kotulska, M., and Unold, O. (2013).
-\newblock Machine learning methods can replace 3d profile method in
-  classification of amyloidogenic hexapeptides.
-\newblock {\em BMC Bioinformatics}, 14:21.
+\bibitem[Sawaya et~al., 2007]{sawaya_atomic_2007}
+Sawaya, M.~R., Sambashivan, S., Nelson, R., Ivanova, M.~I., Sievers, S.~A.,
+  Apostol, M.~I., Thompson, M.~J., Balbirnie, M., Wiltzius, J. J.~W.,
+  McFarlane, H.~T., Madsen, A., Riekel, C., and Eisenberg, D. (2007).
+\newblock Atomic structures of amyloid cross-beta spines reveal varied steric
+  zippers.
+\newblock {\em Nature}, 447(7143):453--457.
 
 \bibitem[Sweet and Eisenberg, 1983]{sweet_correlation_1983}
 Sweet, R.~M. and Eisenberg, D. (1983).
@@ -168,12 +172,10 @@ Takano, K. and Yutani, K. (2001).
   the empirical stability analysis of mutant proteins.
 \newblock {\em Protein Engineering}, 14(8):525--528.
 
-\bibitem[Tsolis et~al., 2013]{tsolis_consensus_2013}
-Tsolis, A.~C., Papandreou, N.~C., Iconomidou, V.~A., and Hamodrakas, S.~J.
-  (2013).
-\newblock A {Consensus} {Method} for the {Prediction} of
-  ‘{Aggregation}-{Prone}’ {Peptides} in {Globular} {Proteins}.
-\newblock {\em PLOS ONE}, 8(1):e54175.
+\bibitem[Vidal and Ghetti, 2011]{vidal_characterization_2011}
+Vidal, R. and Ghetti, B. (2011).
+\newblock Characterization of amyloid deposits in neurodegenerative diseases.
+\newblock {\em Methods in Molecular Biology (Clifton, N.J.)}, 793:241--258.
 
 \bibitem[Walsh et~al., 2014]{walsh_pasta_2014}
 Walsh, I., Seno, F., Tosatto, S. C.~E., and Trovato, A. (2014).
@@ -197,13 +199,6 @@ Wright, M.~N. and Ziegler, A. (2015).
   {Dimensional} {Data} in {C}++ and {R}.
 \newblock {\em arXiv:1508.04409 [stat]}.
 \newblock arXiv: 1508.04409.
-
-\bibitem[Zambrano et~al., 2015]{zambrano_aggrescan3d_2015}
-Zambrano, R., Jamroz, M., Szczasiuk, A., Pujols, J., Kmiecik, S., and Ventura,
-  S. (2015).
-\newblock {AGGRESCAN}3d ({A}3d): server for prediction of aggregation
-  properties of protein structures.
-\newblock {\em Nucleic Acids Research}, page gkv359.
 
 \bibitem[Zhou and Zhou, 2004]{zhou_quantifying_2004}
 Zhou, H. and Zhou, Y. (2004).

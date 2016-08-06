@@ -102,6 +102,23 @@ slice(bench_measures, c(1L:3, 5, 16L:18)) %>%
                "tab:bench_summary", 2L:5) %>%
   cat
 
+# version with all iterations of AmyloGram
+# slice(bench_measures, c(1L:6, 16L:18)) %>%
+#   mutate(pos = factor(pos, labels = c("6", "6-10", "6-15"))) %>%
+#   mutate(nice_name = paste0(nice_name, " (", pos, ")")) %>%
+#   select(nice_name, AUC, MCC, Sens, Spec) %>%
+#   mutate(nice_name = sub(" (NA)", "", as.character(nice_name), fixed = TRUE)) %>%
+#   mutate(nice_name = sub("14592", "AmyloGram", as.character(nice_name), fixed = TRUE)) %>%
+#   rename(Classifier = nice_name, "AUC" = AUC, "MCC" = MCC, 
+#          "Sensitivity" = Sens, "Specificity" = Spec) %>%
+#   slice(c(4, 5L:7, 1L:3)) %>%
+#   format_table("Results of benchmark on \\textit{pep424} data set for AmyloGram, PASTA2, FoldAmyloid and 
+#                random forest predictor learned on n-grams extracted without any amino acid 
+#                encoding from the sequences of the length specified in the brackets.", 
+#                "tab:bench_summary", 2L:5) %>%
+#   cat
+
+
 # sizes of training sets, requires analysis.R --------------
 
 test_sizes <- data.frame(len = seq_lengths, et = ets) %>% 

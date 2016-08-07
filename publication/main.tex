@@ -47,7 +47,7 @@ rigidity of amino acid residues. Among the most informative n-grams of AmyloGram
 we identified 15 that were already confirmed experimentally. AmyloGram is 
 available as a web-server: \url{www.smorfland.uni.wroc.pl/amylogram/}. The code 
 and results are publicly available at: 
-\url{github.com/michbur/prediction_amyloidogenicity_ngram}.
+\url{www.github.com/michbur/prediction_amyloidogenicity_ngram}.
 \end{abstract}
 
 \begin{document}
@@ -158,26 +158,15 @@ amyloidogenic regions.
 \section{Methods}
 
 \begin{figure}[bth]
-\centerline{\includegraphics[width=0.7\linewidth]{figures/fig2.eps}} 
+\centerline{\includegraphics[width=0.82\linewidth]{figures/fig2.eps}} 
 \caption{The scheme of n-gram extraction from studied peptide sequences. 
-A) Source data: peptides with known amyloidicity status and indicated 
-overlapping hexamers. 
-B) Extraction of the overlapping hexamers with ascribed the 
-amyloid status taken from their source peptide (P-positive, N - 
-negative). 
-C) Clusterization of amino acids into an encoding using a combination of 
-various 
-physicochemical properties (PP). 
-D) Reduction of the amino acid alphabet in hexamers. 
-E) Extraction of n-grams. From each hexamer, we extracted continuous n-grams 
-with the length n = 1, 2 or 3. In addition, we selected gapped 2-grams with a 
-gap of the length from 1 to 3 residues and gapped 3-grams with a single gap 
-between the first and the second or the second and the third element of the 
-n-gram.
-F) Selection of informative n-grams with Quick Permutation Test (QuiPT).
-G) Training of a random forest classifier using the n-grams selected in the 
-previous 
-step.}\label{fig:ngram_scheme} 
+1. Extraction of overlapping hexamers from peptides with known amyloidicity status. 
+2. Clusterization of amino acids (AA) into groups (ID) using a combination of various 
+physicochemical properties (P1, P2, ...). 
+3. Encoding amino acids of hexamers into corresponding groups (reduced alphabet). 
+4. Extraction of encoded n-grams of differnt types: continuous with the length from 1 to 3 residues; gapped 2-grams with a gap of the length from 1 to 3 residues; gapped 3-grams with a single gap between residues (not all possibilities shown).
+5. Selection of informative n-grams using Quick Permutation Test (QuiPT).
+6. Cross-validation of encodings using random forest classifier, which is trained on the informative n-grams.}\label{fig:ngram_scheme} 
 \end{figure}
 
 \subsection{Data set}
@@ -228,8 +217,8 @@ Set & Sequence length & Status & Sequences & Hexamers \\
 \end{table}
 
 The data used in the study was extracted from AmyLoad data 
-base~\citep{wozniak_amyload:_2015}. We obtained 418 amyloid peptides and 
-1039 non-amyloid peptides.
+base~\citep{wozniak_amyload:_2015}. We obtained 421 amyloid peptides and 
+1044 non-amyloid peptides (1465 sequences in total).
 
   Sequences shorter than six and longer than 25 amino acid residues (i.e., 8 and 
 27 sequences, respectively) were removed from the set. The former were too short 
@@ -368,7 +357,7 @@ for encodings of length 3, 4, 5 and 6, respectively.
 \subsection{Quick Permutation Test (QuiPT)}
 
 The permutation tests are commonly used for filtering important n-grams 
-testing hypothesis that an occurrence of n-gram and a value of a target are 
+testing hypothesis that an occurrence of n-gram and a value of a target attribute are 
 independent. However, they are computationally expensive and, as a result, they 
 often become one of the most limiting factors in these kinds of analyses. 
 Therefore, we developed the Quick Permutation Test which effectively filters 
@@ -685,16 +674,16 @@ PASTA2. Therefore, if we assume such thresholds to both predictors, they will
 detect true non-amyloids with the same specificity but AmyloGram will predict 
 more true amyloids. 
 
-  Two of  the three classifiers trained on  n-grams using  the full alphabet 
+  Two of the three classifiers trained on  n-grams using the full alphabet 
 had also AUCs higher than PASTA2 and all three were more successful than 
 FoldAmyloid, as well as APPNN. They also maintained the high specificity as seen 
 previously during cross-validation. However, they generally performed worse than 
-the classifier based on the reduced amino acid alphabet.
+the classifier based on the reduced amino acid alphabet. It indicates that the
+proper formation of amyloid fibrils instead of specific residues
+requires subsets of amino acids with similar physicochemical properties. The 
+reduction of the alphabet removes the unnecessary information and in consequence 
+simplifies the prediction.
   
-  Among all considered predictors of amyloidogenicity, APPNN had the highest 
-sensitivity. Nevertheless, its AUC was worse than AUCs of all n-gram-based 
-predictors, as well as that of PASTA2  - indicating lower overall performance.
-
 %  AmyloGram is trained to predict amyloidogenic, not amyloidic regions. Hence, 
 %we did not test it on \textit{reg33} data set, which is commonly used to 
 %evaluate the amyloid propensity of the full peptide 

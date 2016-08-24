@@ -1,0 +1,122 @@
+\relax 
+\bibstyle{apalike}
+\citation{vidal_characterization_2011}
+\citation{hard_inhibition_2012}
+\citation{chaturvedi_protein_2016}
+\citation{sawaya_atomic_2007}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{garbuzynskiy_foldamyloid:_2010}
+\citation{walsh_pasta_2014}
+\citation{maurer-stroh_exploring_2010}
+\citation{gasior_fish_2014}
+\citation{familia_prediction_2015}
+\citation{murphy_simplified_2000}
+\citation{breiman_random_2001}
+\citation{wozniak_amyload:_2015}
+\citation{kawashima_aaindex:_2008}
+\citation{wozniak_characteristics_2014}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data set}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Encodings of amino acids}{2}}
+\citation{joe_h._ward_jr_hierarchical_1963}
+\citation{bhaskaran_positional_1988}
+\citation{nishikawa_radial_1986}
+\citation{radzicka_comparing_1988}
+\citation{zhou_quantifying_2004}
+\citation{wozniak_characteristics_2014}
+\citation{wozniak_characteristics_2014}
+\citation{kanehisa_local_1980}
+\citation{prabhakaran_distribution_1990}
+\citation{kim_thermodynamic_1993}
+\citation{argos_structural_1982}
+\citation{sweet_correlation_1983}
+\citation{kidera_statistical_1985}
+\citation{black_development_1991}
+\citation{charton_structural_1982}
+\citation{radzicka_comparing_1988}
+\citation{pontius_deviations_1996}
+\citation{takano_new_2001}
+\citation{kosiol_new_2004}
+\citation{melo_accuracy_2006}
+\citation{kotulska_amyloid_2013}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The scheme of n-gram extraction from studied peptide sequences. 1. Extraction of overlapping hexamers from peptides with known amyloidogenicity status. 2. Clusterization of amino acids (AA) into groups (ID) using a combination of various physicochemical properties (P1, P2, ...). 3. Encoding amino acids of hexamers into corresponding groups (reduced alphabet). 4. Extraction of encoded n-grams of different types: continuous with the length from 1 to 3 residues; gapped 2-grams with a gap of the length from 1 to 3 residues; gapped 3-grams with a single gap between residues (not all possibilities shown). 5. Selection of informative n-grams using Quick Permutation Test (QuiPT). 6. Cross-validation of encodings using random forest classifier, which is trained on the informative n-grams.\relax }}{3}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:ngram_scheme}{{1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Training sets}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Characteristics of training and test data sets used in the cross-validation. All sequences were derived from AmyLoad database. Training data sets are partially overlapping (e.g. set 6-10 contains also sequences from set 6). Test data sets are always disjointed.\relax }}{4}}
+\newlabel{tab:data_sets}{{1}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Quick Permutation Test (QuiPT)}{4}}
+\citation{lehmann_testing_2008}
+\citation{wright_ranger:_2015}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Selected 17 physicochemical properties used to create amino acid encodings.\relax }}{5}}
+\newlabel{tab:properties}{{2}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Cross-validation of encodings}{5}}
+\citation{walsh_pasta_2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Benchmark of AmyloGram}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results and discussion}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Performance of the best encoding}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of mean AUC values of classifiers with various encodings for every possible combination of training and testing data set including different lengths of sequences. The left and right hinges of boxes correspond to the 0.25 and 0.75 quartiles. The bar inside the box represents the median. The gray circles correspond to the encodings with the AUC outside the 0.95 confidence interval. \relax }}{6}}
+\newlabel{fig:AUC_boxplot}{{2}{6}}
+\citation{lopez_de_la_paz_sequence_2004}
+\citation{lopez_de_la_paz_sequence_2004}
+\citation{argos_structural_1982}
+\citation{bhaskaran_positional_1988}
+\citation{charton_structural_1982}
+\citation{kim_thermodynamic_1993}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The best-performing encoding and important n-grams}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The frequency of important n-grams used by the best-performing classifier in amyloid and non-amyloid sequences. The elements of n-grams are amino acids encoded using the best-performing reduced amino acid alphabet. A vertical bar represents a gap in a n-gram between its elements. The frequency was computed using the total number of occurrences divided by the number of possible n-grams of their length. Dots and triangles denote n-grams occurring in motifs found in respectively amyloidogenic and non-amyloidogenic sequences~\citep  {lopez_de_la_paz_sequence_2004}.\relax }}{7}}
+\newlabel{fig:ngrams}{{3}{7}}
+\citation{lopez_de_la_paz_sequence_2004}
+\citation{walsh_pasta_2014}
+\citation{garbuzynskiy_foldamyloid:_2010}
+\citation{familia_prediction_2015}
+\citation{walsh_pasta_2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Benchmark of AmyloGram}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Results of benchmark on \textit  {pep424} data set for PASTA2, FoldAmyloid, AmyloGram and its version learned on n-grams extracted for full amino acid alphabet from the sequences of the lengths specified in the brackets.\relax }}{8}}
+\newlabel{tab:bench_summary}{{3}{8}}
+\bibdata{amyloids}
+\bibcite{argos_structural_1982}{{1}{1982}{{Argos et~al.}}{{}}}
+\bibcite{bhaskaran_positional_1988}{{2}{1988}{{Bhaskaran and Ponnuswamy}}{{}}}
+\bibcite{black_development_1991}{{3}{1991}{{Black and Mould}}{{}}}
+\bibcite{breiman_random_2001}{{4}{2001}{{Breiman}}{{}}}
+\bibcite{charton_structural_1982}{{5}{1982}{{Charton and Charton}}{{}}}
+\bibcite{chaturvedi_protein_2016}{{6}{2016}{{Chaturvedi et~al.}}{{}}}
+\bibcite{familia_prediction_2015}{{7}{2015}{{Fam\IeC {\'\i }lia et~al.}}{{}}}
+\bibcite{garbuzynskiy_foldamyloid:_2010}{{8}{2010}{{Garbuzynskiy et~al.}}{{}}}
+\bibcite{gasior_fish_2014}{{9}{2014}{{Gasior and Kotulska}}{{}}}
+\bibcite{hard_inhibition_2012}{{10}{2012}{{H\IeC {\"a}rd and Lendel}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{9}}
+\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{9}}
+\bibcite{joe_h._ward_jr_hierarchical_1963}{{11}{1963}{{Joe H. Ward Jr}}{{}}}
+\bibcite{kanehisa_local_1980}{{12}{1980}{{Kanehisa and Tsong}}{{}}}
+\bibcite{kawashima_aaindex:_2008}{{13}{2008}{{Kawashima et~al.}}{{}}}
+\bibcite{kidera_statistical_1985}{{14}{1985}{{Kidera et~al.}}{{}}}
+\bibcite{kim_thermodynamic_1993}{{15}{1993}{{Kim and Berg}}{{}}}
+\bibcite{kosiol_new_2004}{{16}{2004}{{Kosiol et~al.}}{{}}}
+\bibcite{kotulska_amyloid_2013}{{17}{2013}{{Kotulska and Unold}}{{}}}
+\bibcite{lehmann_testing_2008}{{18}{2008}{{Lehmann and Romano}}{{}}}
+\bibcite{lopez_de_la_paz_sequence_2004}{{19}{2004}{{L\IeC {\'o}pez de~la Paz and Serrano}}{{}}}
+\bibcite{maurer-stroh_exploring_2010}{{20}{2010}{{Maurer-Stroh et~al.}}{{}}}
+\bibcite{melo_accuracy_2006}{{21}{2006}{{Melo and Marti-Renom}}{{}}}
+\bibcite{murphy_simplified_2000}{{22}{2000}{{Murphy et~al.}}{{}}}
+\bibcite{nishikawa_radial_1986}{{23}{1986}{{Nishikawa and Ooi}}{{}}}
+\bibcite{pontius_deviations_1996}{{24}{1996}{{Pontius et~al.}}{{}}}
+\bibcite{prabhakaran_distribution_1990}{{25}{1990}{{Prabhakaran}}{{}}}
+\bibcite{radzicka_comparing_1988}{{26}{1988}{{Radzicka and Wolfenden}}{{}}}
+\bibcite{sawaya_atomic_2007}{{27}{2007}{{Sawaya et~al.}}{{}}}
+\bibcite{sweet_correlation_1983}{{28}{1983}{{Sweet and Eisenberg}}{{}}}
+\bibcite{takano_new_2001}{{29}{2001}{{Takano and Yutani}}{{}}}
+\bibcite{vidal_characterization_2011}{{30}{2011}{{Vidal and Ghetti}}{{}}}
+\bibcite{walsh_pasta_2014}{{31}{2014}{{Walsh et~al.}}{{}}}
+\bibcite{wozniak_characteristics_2014}{{32}{2014}{{Wozniak and Kotulska}}{{}}}
+\bibcite{wozniak_amyload:_2015}{{33}{2015}{{Wozniak and Kotulska}}{{}}}
+\bibcite{wright_ranger:_2015}{{34}{2015}{{Wright and Ziegler}}{{}}}
+\bibcite{zhou_quantifying_2004}{{35}{2004}{{Zhou and Zhou}}{{}}}
+\newlabel{LastPage}{{}{10}}
+\xdef\lastpage@lastpage{10}
+\gdef\lastpage@lastpageHy{}
+\ttl@finishall

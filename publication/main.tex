@@ -160,11 +160,15 @@ amyloidogenic regions.
 \begin{figure}[bth]
 \centerline{\includegraphics[width=0.82\linewidth]{figures/fig2.eps}} 
 \caption{The scheme of n-gram extraction from studied peptide sequences. 
-1. Extraction of overlapping hexamers from peptides with known amyloidicity status. 
+1. Extraction of overlapping hexamers from peptides with known 
+amyloidogenicity status. 
 2. Clusterization of amino acids (AA) into groups (ID) using a combination of various 
 physicochemical properties (P1, P2, ...). 
 3. Encoding amino acids of hexamers into corresponding groups (reduced alphabet). 
-4. Extraction of encoded n-grams of differnt types: continuous with the length from 1 to 3 residues; gapped 2-grams with a gap of the length from 1 to 3 residues; gapped 3-grams with a single gap between residues (not all possibilities shown).
+4. Extraction of encoded n-grams of different types: continuous with the length 
+from 1 to 3 residues; gapped 2-grams with a gap of the length from 1 to 3 
+residues; gapped 3-grams with a single gap between residues (not all 
+possibilities shown).
 5. Selection of informative n-grams using Quick Permutation Test (QuiPT).
 6. Cross-validation of encodings using random forest classifier, which is trained on the informative n-grams.}\label{fig:ngram_scheme} 
 \end{figure}
@@ -318,8 +322,8 @@ In the initial phase, we extracted overlapping hexamers from all peptides. Each
 hexamer was tagged with one of two etiquettes: amyloid (positive, i.e. 
 originating from an amyloid peptide) or non-amyloid (negative, i.e. originating 
 from a non-amyloid peptide). The etiquette ascribed to the hexamer was based on 
-the amyloid propensity of its source peptide (Fig.~\ref{fig:ngram_scheme} A and 
-B). The hexapeptides constituted our training dataset. 
+the amyloid propensity of its source peptide (Fig.~\ref{fig:ngram_scheme}, step 1). 
+The hexapeptides constituted our training dataset. 
 
   Note that amyloid and non-amyloid elements of the set are not necessarily 
 amyloidogenic or non-amyloidogenic, respectively. Hence, assuming that only a 
@@ -344,12 +348,12 @@ the six residues, we can expect no false positive hexamers in this set.
 Moreover, we created two training sets with the progressively more liberal limit 
 of the maximum sequence length (6-10 residues and 6-15 residues).
 
-  From each hexamer we extracted encoded n-grams (Fig.~\ref{fig:ngram_scheme} D 
-and E) with the length of 1, 2 and 3. In the case of 2- and 3-grams, we 
+  From each hexamer we extracted encoded n-grams (Fig.~\ref{fig:ngram_scheme}, step 3 and 4) 
+with the length of 1, 2 and 3. In the case of 2- and 3-grams, we 
 separately analyzed continuous and gapped n-grams. For 2-grams, we considered 
 n-grams with the gap of the length from 1 to 3, whereas the 3-grams could 
 contain a single gap between the first and the second or the second and the 
-third position (see Fig.~\ref{fig:ngram_scheme}). The total number of n-grams 
+third position. The total number of n-grams 
 depends on the the length of the encoding and is equal to 120, 260, 480 and 798 
 for encodings of length 3, 4, 5 and 6, respectively.
 
@@ -366,7 +370,7 @@ information gain (mutual information) as the criterion of the importance of a
 specific n-gram. We used it to select the most discriminating n-grams extracted 
 from the hexamers of the training data set. The counts of n-grams were binarized 
 (1 if n-gram was present, 0 if absent). Only n-grams with the p-value smaller 
-than 0.05 were assumed to be informative (Fig.~\ref{fig:ngram_scheme} F). 
+than 0.05 were assumed to be informative (Fig.~\ref{fig:ngram_scheme}, step 5). 
 
   Let us consider a contingency table for a target $y$ and 
 a feature $x$. For example, the entry $n_{1,0}$ is the number of cases when the 
@@ -434,7 +438,7 @@ The encoding yielding classifier with the best ability to correctly predict
 amyloidogenicity of peptides was chosen during the five-fold cross-validation. 
 We used random forests as a method for classification and trained them on the 
 binary n-gram data drawn from the overlapping hexamers, considering only n-grams 
-selected by QuiPT (Fig.~\ref{fig:ngram_scheme} G). We grown the forest keeping 
+selected by QuiPT (Fig.~\ref{fig:ngram_scheme}, step 6). We grown the forest keeping 
 the default number of tree (500) and the default number of variables to possibly 
 split in each node (the rounded down square root of the total number of 
 variables). To speed up the computation, we used the fastest implementation of 
@@ -518,7 +522,7 @@ set.
 longest peptides, ranging from 16 to 25 residues, when the algorithm was trained 
 also on longer peptides (6-10 and 6-15 data sets). Here the AUC value did not 
 exceed 0.77. The weakest performance results from more complex organization of 
-longer amylogenic peptides. In such peptides, only a very specific region of 
+longer amyloidogenic peptides. In such peptides, only a very specific region of 
 residues might be responsible for the creation of harmful aggregates. In this 
 case, when overlapping hexamers are extracted, only part of them may carry the 
 true signal of amyloidogenicity but all of them are marked as amyloids. 
@@ -646,7 +650,7 @@ FoldAmyloid~\citep{walsh_pasta_2014}.
   We analyzed AUC, Matthew's Correlation Coefficient (MCC), sensitivity and 
 specificity (see Tab.~\ref{tab:bench_summary}). We used default settings for 
 FoldAmyloid and APPNN. PASTA2 evaluated the input data in the 'Peptides' mode, 
-which is adviced by its authors for a peptide data. Since PASTA2 does not 
+which is advised by its authors for a peptide data. Since PASTA2 does not 
 return a probability of belonging to a specific 
 category, we normalized the output data to compute the AUC values. The advised 
 energy threshold (-5) was also normalized in the same manner and used as cut-off 
@@ -660,7 +664,7 @@ reduction of the alphabet appeared efficient enough to produce classifiers able
 to outperform other published methods. AmyloGram showed the highest AUC and MCC 
 among all tested classifiers. It should be noted that it outperformed its 
 counterparts trained on full amino acid alphabet. The reduction of the 
-alphabet not only reduced number of features simplyfying the analysis, but 
+alphabet not only reduced number of features simplifying the analysis, but 
 putatively also helped in the generation of more
 precise prediction rules. It is important to highlight that AmyloGram 
 is the most balanced tool among all analyzed classifiers, having the best 
@@ -717,7 +721,7 @@ associated with amyloidogenicity are hydrophobicity and tendency to forming
 $\beta$-sheets.  We additionally discovered that amino acid flexibility can also 
 sufficiently discriminate amyloid and non-amyloid peptides. The aggregating 
 peptides tend to be characterized by more rigid chains. Most importantly, the 
-Amylogram also showed sequential patterns of the aminoacid groups appearing in 
+Amylogram also showed sequential patterns of the amino acid groups appearing in 
 the amyloids. Among the most informative n-grams we identified 15 that were 
 already confirmed experimentally. 
 
